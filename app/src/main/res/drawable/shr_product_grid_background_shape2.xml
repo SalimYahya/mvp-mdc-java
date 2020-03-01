@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- Back Square -->
+    <item
+        android:width="1000dp"
+        android:height="1000dp"
+        android:left="29.5dp"
+        android:top="0dp">
+        <shape>
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+
+    <!-- Small Corner Square -->
+    <item
+        android:width="42dp"
+        android:height="42dp"
+        android:left="-590dp"
+        android:top="6dp">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="100%">
+            <shape>
+                <solid android:color="@color/colorWhite" />
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Front Square -->
+    <item
+        android:width="1000dp"
+        android:height="1000dp"
+        android:top="33dp">
+        <shape>
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+
+</layer-list>

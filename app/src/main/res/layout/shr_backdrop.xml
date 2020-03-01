@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_featured"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FEATURED"
+        android:textColor="@color/colorWhite"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_apartment"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APARTMENT"
+        android:textColor="@color/colorWhite"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_accessories"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACCESSORIES"
+        android:textColor="@color/colorWhite"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_shoes"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOES"
+        android:textColor="@color/colorWhite"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tops"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOPS"
+        android:textColor="@color/colorWhite"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_bottoms"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTTOMS"
+        android:textColor="@color/colorWhite"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dresses"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DRESSES"
+        android:textColor="@color/colorWhite"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/logout"
+        android:text="LOGOUT"
+        android:textColor="@color/colorWhite"/>
+
+</merge>
