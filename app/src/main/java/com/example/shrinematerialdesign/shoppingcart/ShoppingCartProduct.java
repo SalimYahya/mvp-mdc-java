@@ -1,5 +1,7 @@
 package com.example.shrinematerialdesign.shoppingcart;
 
+import android.net.Uri;
+
 import com.example.shrinematerialdesign.data.ProductEntry;
 
 public class ShoppingCartProduct {
@@ -7,11 +9,14 @@ public class ShoppingCartProduct {
     String name;
     String price;
     String numberOfOrders;
+    String url;
 
-    public ShoppingCartProduct(String name, String price, String numberOfOrders) {
+    public ShoppingCartProduct(String name, String price, String numberOfOrders, String url) {
         this.name = name;
         this.price = price;
         this.numberOfOrders = numberOfOrders;
+
+        this.url = url;
     }
 
     public String getName() {

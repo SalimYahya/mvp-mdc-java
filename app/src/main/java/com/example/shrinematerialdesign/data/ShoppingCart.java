@@ -1,7 +1,5 @@
 package com.example.shrinematerialdesign.data;
 
-import android.net.Uri;
-
 import com.example.shrinematerialdesign.shoppingcart.ShoppingCartProduct;
 
 import java.util.ArrayList;
@@ -52,7 +50,7 @@ public class ShoppingCart {
         return strg;
     }
 
-    public List<ShoppingCartProduct> getTest(){
+    public List<ShoppingCartProduct> getOrderList(){
         List <ShoppingCartProduct> orderList = new ArrayList<ShoppingCartProduct>();
 
         for(Map.Entry<ProductEntry, Integer> entry : orders.entrySet()){
@@ -60,8 +58,9 @@ public class ShoppingCart {
             String name = entry.getKey().title;
             String price = entry.getKey().price;
             int numberOfOrders = entry.getValue();
+            String url = entry.getKey().url;
 
-            orderList.add(new ShoppingCartProduct(name, price, String.valueOf(numberOfOrders)) );
+            orderList.add(new ShoppingCartProduct(name, price, String.valueOf(numberOfOrders), url ) );
 
         }
 

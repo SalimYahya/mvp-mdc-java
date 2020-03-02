@@ -17,11 +17,11 @@ import java.util.List;
 public class ShoppingProductCardRecyclerViewAdapter extends RecyclerView.Adapter<ShoppingProductCardViewHolder> {
 
     private List<ShoppingCartProduct> shoppingCartProductList;
-    //private ImageRequester imageRequest;
+    private ImageRequester imageRequest;
 
     public ShoppingProductCardRecyclerViewAdapter() {
-        this.shoppingCartProductList = ShoppingCart.getInstance().getTest();
-        //imageRequest = ImageRequester.getInstance();
+        this.shoppingCartProductList = ShoppingCart.getInstance().getOrderList();
+        imageRequest = ImageRequester.getInstance();
     }
 
     @NonNull
@@ -38,6 +38,7 @@ public class ShoppingProductCardRecyclerViewAdapter extends RecyclerView.Adapter
             ShoppingCartProduct product = shoppingCartProductList.get(position);
             holder.productName.setText(product.name);
             holder.productQty.setText(product.getNumberOfOrders().concat(" items X ").concat(product.price));
+            imageRequest.setImageFromUrl(holder.productImage, product.url);
 
             int qtyTemp = Integer.parseInt(product.getNumberOfOrders());
             int productPriceTemp = Integer.parseInt(product.price.replaceAll("\\$", ""));
@@ -45,7 +46,6 @@ public class ShoppingProductCardRecyclerViewAdapter extends RecyclerView.Adapter
             holder.totalPricePerProduct.setText("$".concat(String.valueOf(totalTemp)));
 
             holder.numberOfOrder.setText(product.getNumberOfOrders());
-
         }
     }
 

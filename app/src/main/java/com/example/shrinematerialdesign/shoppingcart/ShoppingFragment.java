@@ -20,9 +20,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shrinematerialdesign.MainActivity;
 import com.example.shrinematerialdesign.R;
 import com.example.shrinematerialdesign.data.ShoppingCart;
 import com.example.shrinematerialdesign.product.NavigationIconClickListener;
+import com.example.shrinematerialdesign.product.view.ProductGridFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -61,7 +63,7 @@ public class ShoppingFragment extends Fragment {
             Log.d(TAG, mName);
         }
 
-        Toast.makeText(getActivity(), ShoppingCart.getInstance().getTest().toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getActivity(), ShoppingCart.getInstance().getOrderList().toString(), Toast.LENGTH_LONG).show();
     }
 
     @Nullable
@@ -95,7 +97,16 @@ public class ShoppingFragment extends Fragment {
                     new AccelerateDecelerateInterpolator());
         }
 
-        //toolbar.setNavigationOnClickListener(new NavigationIconClickListener(getActivity(), view.findViewById(R.id.product_grid)));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity) getActivity())
+                        .replaceFragment(
+                                ProductGridFragment
+                                        .newInstance("product grid fragment"), "product grid fragment"
+                        );
+            }
+        });
     }
 
     @Override

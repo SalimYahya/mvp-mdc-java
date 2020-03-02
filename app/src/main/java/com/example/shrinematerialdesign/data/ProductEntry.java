@@ -81,7 +81,9 @@ public class ProductEntry {
 
     @Override
     public String toString() {
-        return "name='" + title + '\'' +
-                ", price='" + price;
+        return "name: " + title + "\n"+
+                "price: " + price + "\n" +
+                "dynamicUrl: " + dynamicUrl + "\n" +
+                "Url: " + url + "\n";
     }
 }

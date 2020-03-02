@@ -16,11 +16,14 @@ class ShoppingProductCardViewHolder extends RecyclerView.ViewHolder {
     public TextView productName, totalPricePerProduct, productQty, numberOfOrder;
     ImageButton subtract_btn, addition_btn;
     MaterialCardView productCardView;
+    public NetworkImageView productImage;
 
     public ShoppingProductCardViewHolder(@NonNull final View itemView) {
         super(itemView);
 
         productCardView = itemView.findViewById(R.id.shr_shopping_cart_product_card);
+
+        productImage = itemView.findViewById(R.id.product_image);
         productName = itemView.findViewById(R.id.product_name);
         productQty = itemView.findViewById(R.id.product_qty);
         totalPricePerProduct = itemView.findViewById(R.id.total_price_per_product);
@@ -28,6 +31,7 @@ class ShoppingProductCardViewHolder extends RecyclerView.ViewHolder {
         subtract_btn = itemView.findViewById(R.id.subtract_order);
         numberOfOrder = itemView.findViewById(R.id.number_of_order);
         addition_btn = itemView.findViewById(R.id.add_order);
+
     }
 
 }
